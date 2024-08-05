@@ -43,20 +43,20 @@
                     <div class="saran">
                         <h1>Kritik dan Saran</h1>
                         <p>Komentar anda sangat berharga bagi kami</p>
-                        <table width="100%">
-                            <tr>
-                                <td>Email</td><td>:</td><td><input type="email" placeholder="Masukan Email anda"></td>
-                            </tr>
-                            <tr>
-                                <td id="kritiksaran">Kritik dan Saran</td><td>:</td><td><textarea placeholder="Masukan komentar anda"></textarea></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" align="center">
-                                    <button type="submit" class="kirimsaran">Kirim</button>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Masukkan Email Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="kritiksaran">Kritik dan Saran</label>
+                                <textarea id="kritiksaran" name="kritiksaran" placeholder="Masukkan komentar Anda" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="kirimsaran">Kirim</button>
+                            </div>
+                        </form>
+                    </div>             
                 </td>
             </tr>
         </table><br>
