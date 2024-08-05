@@ -38,7 +38,7 @@
                             <br><br>
                             Jadi, mulailah berbelanja sekarang dan biarkan kami merawat sisanya. Terima kasih telah memilih S-Market sebagai toko belanjaan Anda. Kami siap melayani Anda dengan sepenuh hati!"</p>
                     <div class="belanjasekarang">
-                        <a href="index.html"><button class="teksbutton">Belanja Sekarang</button></a>
+                        <a href="shopping.html"><button class="teksbutton">Belanja Sekarang</button></a>
                     </div><br></div><br>
                     <div class="saran">
                         <h1>Kritik dan Saran</h1>
@@ -101,5 +101,39 @@
             </tr>
         </table>
     </footer>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Ambil nilai input
+        const email = document.getElementById('email').value;
+        const kritiksaran = document.getElementById('kritiksaran').value;
+        
+        // Buat pesan untuk WhatsApp
+        const message = `Kritik dan Saran\n\nEmail: ${email}\nKomentar: ${kritiksaran}`;
+        
+        // Encode pesan untuk URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // Buat URL WhatsApp dengan pesan
+        const whatsappUrl = `https://wa.me/+6288991715346?text=${encodedMessage}`;
+        
+        // Tampilkan SweetAlert
+        Swal.fire({
+            title: 'Terima kasih!',
+            text: 'Komentar Anda telah dikirim.',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Redirect ke WhatsApp
+                window.location.href = whatsappUrl;
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
