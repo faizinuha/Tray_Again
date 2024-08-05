@@ -23,7 +23,7 @@
     </header>
     <main>
         <table cellpadding="10px" id="tabel-barang-yang-dipilih" width="70%" align="center">
-            <form action="beli.html">
+            <form action="#" id="beli">
                 <tr>
                     <td colspan="5">
                         <h1>Pilih Barang</h1>
@@ -245,5 +245,17 @@
             </tr>
         </table>
     </footer>
+
+    <script>
+       document.getElementById('beli').addEventListener('submit', function(event) {
+    event.preventDefault(); // Mencegah formulir dikirim secara default
+    alert('Terima kasih sudah beli!'); // Menampilkan pesan alert
+
+    setTimeout(() => {
+        window.location.href = "index.html"; // Mengarahkan pengguna ke halaman index.html setelah 2 detik
+    }, 2000); // Delay 2000 milidetik (2 detik)
+});
+
+    </script>
 </body>
 </html>

@@ -1,9 +1,11 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -11,10 +13,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-table {
-  background-color: white;
-  align-items: center;
-}
+
 .header {
   position: sticky;
   top: 0;
@@ -22,23 +21,27 @@ table {
   z-index: 100;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
-/* navbar */
+
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 }
-nav a {
+
+.navbar a {
   text-decoration: none;
   font-size: xx-large;
+  color: inherit;
 }
-.search {
-  width: 290%;
+
+/* .search {
+  width: 290px;
   height: 40px;
   border-radius: 20px;
   text-align: center;
-}
+} */
+
 button {
   width: 40px;
   height: 40px;
@@ -47,82 +50,145 @@ button {
   border: none;
   cursor: pointer;
 }
+
 button:hover {
   color: white;
   background-color: #1c2542;
 }
-/* footer */
-footer table {
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   background-color: black;
-  width: 100%;
-  align-items: center;
-  border: 2;
-  border-color: white;
-}
-footer {
-  color: #fff;
-  text-align: center;
-}
-footer a {
-  color: #fff;
-  cursor: pointer;
-  text-decoration: none;
-}
-footer a:hover {
-  color: violet;
-}
-table {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: sans-serif;
-}
-.pemanjang {
-  height: 200px;
-}
-.inputlogin {
-  width: 98%;
-  height: 30px;
+  color: white;
+  padding: 20px;
 }
 
-table {
-  background-color: #ebd3eb;
+.footer-section {
+  margin: 10px;
 }
+
+.footer-section h4 {
+  margin-top: 0;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: violet;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+
 .buttonmasuk {
-  width: 50%;
-  height: 35px;
+  text-align: center;
+  justify-content: center;
+  display: inline;
+  width: 100px;
+  /* height: 35px;  */
   background-color: #d0aee0;
   border-radius: 35px;
   cursor: pointer;
 }
+
 .buttonmasuk:hover {
   color: white;
   background-color: #1c2542;
 }
-table button {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-table button:hover {
-  color: #ebd3eb;
-}
-#userprofile:hover {
-  color: white;
-}
-main a {
-  text-decoration: none;
-}
-main a:hover {
-  text-decoration: underline;
-}
 
-.center {
+/* .center {
   text-align: center;
-}
+} */
+
 main {
   background-color: #ebd3eb;
+  padding: 20px;
+}
+
+/* Styling for the login section */
+.login-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-container .inputlogin {
+  width: calc(100% - 20px);
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.login-container .buttonmasuk {
+  display: block;
+  width: 100%;
+  background-color: #d0aee0;
+  border-radius: 35px;
+  padding: 10px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-container .buttonmasuk:hover {
+  background-color: #1c2542;
+}
+
+.login-container .center {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.login-container .center a {
+  color: #d0aee0;
+  text-decoration: none;
+}
+
+.login-container .center a:hover {
+  text-decoration: underline;
 }
